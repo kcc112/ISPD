@@ -15,12 +15,12 @@ public class Start {
         try {
             SortTabNumbers sortExample = new SortTabNumbers(Integer.parseInt(args[0].trim()));
 
-            System.out.println("Przed sortowaniem: " + sortExample); //niejawne wywołanie metody sortExample.toString()
+            System.out.println("Przed sortowaniem: " + sortExample.toString()); //niejawne wywołanie metody sortExample.toString()
 
             sortExample.sort(); 
 
             if (sortExample.checkMinOrderSort()) {
-                System.out.println("Po sortowaniu: " + sortExample); //niejawne wywołanie metody sortExample.toString()
+                System.out.println("Po sortowaniu: " + sortExample.toString()); //niejawne wywołanie metody sortExample.toString()
             }
         } catch (NumberFormatException nfe) {
             System.out.println("Podany argument nie jest liczbą");

@@ -11,7 +11,7 @@ public class SortTabNumbers {
 
     private final long tab[];
 
-    public SortTabNumbers(final int max) {
+    SortTabNumbers(final int max) {
         tab = new long[max];
         for (int i = 0; i < max; i++) {
             tab[i] = (long) (Math.random() * Long.MAX_VALUE);
@@ -22,7 +22,7 @@ public class SortTabNumbers {
      * W metodzie należy zminimalizować liczbę wykonywanych porównań
      * opdpowiednio ustalając wartości początkową dla zmienej j.
      */
-    public void sort() {
+    void sort() {
         for (int i = 0; i < tab.length - 1; i++) {
             for (int j = i + 1; j < tab.length; j++) {
                 if (tab[i] > tab[j]) {
@@ -38,7 +38,7 @@ public class SortTabNumbers {
         tab[j] = x;
     }
 
-    public boolean checkMinOrderSort() {
+    boolean checkMinOrderSort() {
         for (int k = 0; k < tab.length - 1; k++) {
             if (tab[k] > tab[k + 1]) {
                 return false;
