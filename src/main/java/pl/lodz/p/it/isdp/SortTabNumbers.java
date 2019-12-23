@@ -33,8 +33,9 @@ public class SortTabNumbers {
     }
 
     private void swap(final int i, final int j) {
+        long x = tab[j];
         tab[i] = tab[j];
-        tab[j] = tab[i];
+        tab[j] = x;
     }
 
     public boolean checkMinOrderSort() {
