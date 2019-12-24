@@ -8,12 +8,13 @@ package pl.lodz.p.it.isdp;
 public class Start {
 
     public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println("Brak podanej liczby całkowitej jako argumentu wywołania");
-            System.exit(1);
-        }
+        String a = "1";
+//        if (args.length == 0) {
+//            System.out.println("Brak podanej liczby całkowitej jako argumentu wywołania");
+//            System.exit(1);
+//        }
         try {
-            SortTabNumbers sortExample = new SortTabNumbers(Integer.parseInt(args[0].trim()));
+            SortTabNumbers sortExample = new SortTabNumbers(Integer.parseInt(a));
 
             System.out.println("Przed sortowaniem: " + sortExample.toString()); //niejawne wywołanie metody sortExample.toString()
 
@@ -22,6 +23,7 @@ public class Start {
             if (sortExample.checkMinOrderSort()) {
                 System.out.println("Po sortowaniu: " + sortExample.toString()); //niejawne wywołanie metody sortExample.toString()
             }
+            JdbcDerbyConnection.connect();
         } catch (NumberFormatException nfe) {
             System.out.println("Podany argument nie jest liczbą");
             System.exit(2);
