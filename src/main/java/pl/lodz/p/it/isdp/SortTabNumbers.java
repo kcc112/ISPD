@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class SortTabNumbers {
 
-    private final long tab[];
+    private final long []tab;
 
     SortTabNumbers(final int max) {
         tab = new long[max];
@@ -50,5 +50,9 @@ public class SortTabNumbers {
     @Override
     public String toString() {
         return "tab=" + Arrays.toString(tab);
+    }
+
+    long[] getTab() {
+        return tab;
     }
 }
