@@ -33,7 +33,7 @@ public class SortTabNumbers {
     }
 
     private void swap(final int i, final int j) {
-        long x = tab[j];
+        long x = tab[i];
         tab[i] = tab[j];
         tab[j] = x;
     }
