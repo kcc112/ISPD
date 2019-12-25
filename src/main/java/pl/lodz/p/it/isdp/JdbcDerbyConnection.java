@@ -12,7 +12,7 @@ class JdbcDerbyConnection {
         properties.put("user", System.getenv("ADMIN"));
         properties.put("password", System.getenv("PASSWORD"));
 
-        String sql = "INSERT INTO array (Array) VALUES (?)";
+        String sql = "INSERT INTO Arrays (Array) VALUES (?)";
 
         try (Connection conn = DriverManager.getConnection(connectionStrings, properties);
              PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
